@@ -16,9 +16,6 @@ Ever missed an exciting lecture because you forgot to check the university websi
   - Easy unsubscribe option
 - 🎯 **Smart Tracking**: No duplicate notifications - we keep track of what we've sent!
 
-### 📬 Email Example
-<img src="./images/example.png" width="600" alt="Email Notification Example">
-
 ## 🛠 Tech Behind It
 
 Built with Flask because, well, sometimes simple is better! The API handles all the subscribe/unsubscribe magic, making sure your email preferences are taken care of.
@@ -86,9 +83,6 @@ Now you can access the service at `http://localhost:5008`!
   - 一键退订选项
 - 🎯 **智能追踪**：不会重复发送已通知的讲座
 
-### 📬 邮件示例
-<img src="./images/example.png" width="600" alt="邮件通知示例">
-
 ## 🛠 技术实现
 
 使用 Flask 框架搭建，简单可靠！API 轻松处理订阅/退订请求，妥善管理您的邮件偏好。
@@ -135,6 +129,9 @@ python app.py
 ```
 
 现在你可以通过 `http://localhost:5008` 访问服务啦！
+
+### 📬 Email Example
+<img src="./images/example.png" width="600" alt="Email Notification Example">
 
 ## 📜 License
 

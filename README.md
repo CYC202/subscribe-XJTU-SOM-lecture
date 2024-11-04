@@ -16,10 +16,6 @@ Ever missed an exciting lecture because you forgot to check the university websi
   - Easy unsubscribe option
 - 🎯 **Smart Tracking**: No duplicate notifications - we keep track of what we've sent!
 
-### 📬 Email Example
-<img src="[https://github-production-user-asset-6210df.s3.amazonaws.com/140780987/382714269-c92a7dd2-15b9-4fa0-aefe-fafae2279235.png]([https://github.com/user-attachments/assets/0dadd989-c07b-44f3-9482-9ee1a39c7806](https://github.com/user-attachments/assets/0dadd989-c07b-44f3-9482-9ee1a39c7806))" width="600" alt="Email Notification Example">
-
-
 ## 🛠 Tech Behind It
 
 Built with Flask because, well, sometimes simple is better! The API handles all the subscribe/unsubscribe magic, making sure your email preferences are taken care of.
@@ -42,7 +38,7 @@ For example:
 - Subscribe: `http://104.214.172.60:5008/subscribe/johndoe@example.com`
 - Unsubscribe: `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`
 
-> 💝 This service runs on a personal server and is completely free to use!
+> ✈️ This service runs on a personal server and is completely free to use!
 
 ## 🏠 Run it Locally
 
@@ -87,9 +83,6 @@ Now you can access the service at `http://localhost:5008`!
   - 一键退订选项
 - 🎯 **智能追踪**：不会重复发送已通知的讲座
 
-### 📬 邮件示例
-<img src="[https://github-production-user-asset-6210df.s3.amazonaws.com/140780987/382714269-c92a7dd2-15b9-4fa0-aefe-fafae2279235.png](https://github.com/user-attachments/assets/0dadd989-c07b-44f3-9482-9ee1a39c7806)" width="600" alt="邮件通知示例">
-
 ## 🛠 技术实现
 
 使用 Flask 框架搭建，简单可靠！API 轻松处理订阅/退订请求，妥善管理您的邮件偏好。
@@ -112,7 +105,7 @@ http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com
 - 订阅：`http://104.214.172.60:5008/subscribe/johndoe@example.com`
 - 退订：`http://104.214.172.60:5008/unsubscribe/johndoe@example.com`
 
-> 💝 这是个人服务器，完全免费提供给大家使用！
+> ✈️ 这是个人服务器，完全免费提供给大家使用！
 
 ## 🏠 本地运行
 
@@ -135,7 +128,10 @@ pip install -r requirements.txt
 python app.py
 ```
 
-现在你可以通过 `http://localhost:5008` 访问服务了！
+现在你可以通过 `http://localhost:5008` 访问服务啦！
+
+### 📬 Email Example
+<img src="./images/example.png" width="600" alt="Email Notification Example">
 
 ## 📜 License
 

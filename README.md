@@ -17,7 +17,7 @@ Ever missed an exciting lecture because you forgot to check the university websi
 - 🎯 **Smart Tracking**: No duplicate notifications - we keep track of what we've sent!
 
 ### 📬 Email Example
-<img src="./image/example.png" width="600" alt="Email Notification Example">
+<img src="./images/example.png" width="600" alt="Email Notification Example">
 
 ## 🛠 Tech Behind It
 
@@ -87,7 +87,7 @@ Now you can access the service at `http://localhost:5008`!
 - 🎯 **智能追踪**：不会重复发送已通知的讲座
 
 ### 📬 邮件示例
-<img src="./image/example.png" width="600" alt="邮件通知示例">
+<img src="./images/example.png" width="600" alt="邮件通知示例">
 
 ## 🛠 技术实现
 

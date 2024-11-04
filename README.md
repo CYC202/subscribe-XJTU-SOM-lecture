@@ -22,6 +22,8 @@ Utilizing the Flask framework, the project creates an API that manages subscript
 - **订阅管理**：用户可以轻松地订阅或退订。
 - **监测功能**：跟踪和记录已发送的讲座信息，以避免重复通知。
 
+![image](https://github.com/user-attachments/assets/c92a7dd2-15b9-4fa0-aefe-fafae2279235)
+
 > **Note**: You can subscribe to lecture updates by entering `http://104.214.172.60:5008/subscribe/your_email@example.com` in your browser. For example, you can use `http://104.214.172.60:5008/subscribe/johndoe@example.com`.
 > To unsubscribe, simply enter `http://104.214.172.60:5008/unsubscribe/your_email@example.com`, such as `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`.
 > This is a personal server, provided free of charge.

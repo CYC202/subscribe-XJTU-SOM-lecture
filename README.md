@@ -12,7 +12,7 @@ Utilizing the Flask framework, the project creates an API that manages subscript
 
 ---
 
-**subscribe-XJTU-SOM-lecture** 是一个旨在帮助用户及时获取西安交通大学管理学院最新讲座信息的项目。由于讲座更新仅在官方网站上发布，用户常常会错过重要的信息。该程序每小时监测讲座公告，并确保用户及时收到重要活动的更新。
+**subscribe-XJTU-SOM-lecture** 是一个旨在帮助用户及时获取西安交通大学管理学院最新讲座信息的项目。由于讲座更新仅在官方网站上发布，难以跟踪。该程序每小时监测讲座公告，并确保大家及时收到重要活动的更新。
 
 该项目使用 Flask 框架创建了一个 API，处理订阅和退订请求。订阅者将收到包含讲座题目、公告时间、海报和退订选项的电子邮件。
 

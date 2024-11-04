@@ -17,7 +17,8 @@ Ever missed an exciting lecture because you forgot to check the university websi
 - 🎯 **Smart Tracking**: No duplicate notifications - we keep track of what we've sent!
 
 ### 📬 Email Example
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/140780987/382714269-c92a7dd2-15b9-4fa0-aefe-fafae2279235.png" width="600" alt="Email Notification Example">
+<img src="[https://github-production-user-asset-6210df.s3.amazonaws.com/140780987/382714269-c92a7dd2-15b9-4fa0-aefe-fafae2279235.png]([https://github.com/user-attachments/assets/0dadd989-c07b-44f3-9482-9ee1a39c7806](https://github.com/user-attachments/assets/0dadd989-c07b-44f3-9482-9ee1a39c7806))" width="600" alt="Email Notification Example">
+
 
 ## 🛠 Tech Behind It
 
@@ -87,7 +88,7 @@ Now you can access the service at `http://localhost:5008`!
 - 🎯 **智能追踪**：不会重复发送已通知的讲座
 
 ### 📬 邮件示例
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/140780987/382714269-c92a7dd2-15b9-4fa0-aefe-fafae2279235.png" width="600" alt="邮件通知示例">
+<img src="[https://github-production-user-asset-6210df.s3.amazonaws.com/140780987/382714269-c92a7dd2-15b9-4fa0-aefe-fafae2279235.png](https://github.com/user-attachments/assets/0dadd989-c07b-44f3-9482-9ee1a39c7806)" width="600" alt="邮件通知示例">
 
 ## 🛠 技术实现
 

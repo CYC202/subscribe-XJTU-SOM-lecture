@@ -2,18 +2,17 @@ from flask import Flask, request, jsonify
 from lecture_monitor import LectureMonitor
 import os
 import re
+import threading
+import time
 
 app = Flask(__name__)
 
 URL = "https://som.xjtu.edu.cn/xsdt/xshd.htm"
-# Get the current path
 current_directory = os.path.dirname(os.path.abspath(__file__))
-# Define file paths directly in the main folder
 EMAIL_CREDENTIALS_FILE = os.path.join(current_directory, "email_credentials.txt")
 TO_EMAILS_FILE = os.path.join(current_directory, "to_emails.txt")
 STORAGE_FILE = os.path.join(current_directory, "sent_lectures.txt")
 
-# Email format validation function
 def is_valid_email(email):
     regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     return re.match(regex, email) is not None
@@ -78,5 +77,12 @@ def get_subscribed_emails():
     subscribed_emails = list(monitor.to_emails)
     return jsonify({'subscribed_emails': subscribed_emails})
 
+def run_monitor_periodically():
+    while True:
+        run_monitor()  # Call the monitor function
+        time.sleep(3600)  # Sleep for 1 hour (3600 seconds)
+
 if __name__ == "__main__":
+    # Start the monitoring thread
+    threading.Thread(target=run_monitor_periodically, daemon=True).start()
     app.run(host='0.0.0.0', port=5008)

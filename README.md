@@ -40,6 +40,29 @@ For example:
 
 > 💝 This service runs on a personal server and is completely free to use!
 
+## 🏠 Run it Locally
+
+Don't want to use the public server? No problem! You can run this project locally:
+
+1. Clone the repository
+```bash
+git clone https://github.com/CYC202/subscribe-XJTU-SOM-lecture.git
+```
+
+2. Install requirements
+```bash
+pip install -r requirements.txt
+```
+
+3. Configure your email settings in `config.py`
+
+4. Run the application
+```bash
+python app.py
+```
+
+Now you can access the service at `http://localhost:5008`!
+
 ---
 
 # 西交管理学院讲座订阅助手 
@@ -83,6 +106,29 @@ http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com
 - 退订：`http://104.214.172.60:5008/unsubscribe/johndoe@example.com`
 
 > 💝 这是个人服务器，完全免费提供给大家使用！
+
+## 🏠 本地运行
+
+如果不想使用公共服务器，你也可以在本地运行这个项目：
+
+1. 克隆仓库
+```bash
+git clone https://github.com/CYC202/subscribe-XJTU-SOM-lecture.git
+```
+
+2. 安装依赖
+```bash
+pip install -r requirements.txt
+```
+
+3. 在 `config.py` 中配置你的邮箱设置
+
+4. 运行应用
+```bash
+python app.py
+```
+
+现在你可以通过 `http://localhost:5008` 访问服务啦！
 
 ## 📜 License
 

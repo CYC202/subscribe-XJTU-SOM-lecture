@@ -249,17 +249,17 @@ class LectureMonitor:
             </ul>
         """
 
-        # Convert to_emails to a list to get the first email for the unsubscribe link
-        email_list = list(self.to_emails)
-        unsubscribe_link = f'<a href="{base_url}/unsubscribe/{email_list[0]}">Unsubscribe</a>'
-        html_content += f"""
-            <div class="unsubscribe">
-                {unsubscribe_link}
-            </div>
-            </div>
-        </body>
-        </html>
-        """
+        # # Convert to_emails to a list to get the first email for the unsubscribe link
+        # email_list = list(self.to_emails)
+        # unsubscribe_link = f'<a href="{base_url}/unsubscribe/{email_list[0]}">Unsubscribe</a>'
+        # html_content += f"""
+        #     <div class="unsubscribe">
+        #         {unsubscribe_link}
+        #     </div>
+        #     </div>
+        # </body>
+        # </html>
+        # """
 
         msg.attach(MIMEText(html_content, 'html', 'utf-8'))
 

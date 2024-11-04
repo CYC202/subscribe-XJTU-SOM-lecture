@@ -1,5 +1,13 @@
 # subscribe-XJTU-SOM-lecture
 
+> **Note**: You can subscribe to lecture updates by entering `http://104.214.172.60:5008/subscribe/your_email@example.com` in your browser.
+> To unsubscribe, simply enter `http://104.214.172.60:5008/unsubscribe/your_email@example.com`.
+> This is a personal server I set up, provided free of charge.
+
+> **注**：您可以通过在浏览器中输入 `http://104.214.172.60:5008/subscribe/你的邮箱@example.com` 来订阅讲座更新，例如 `http://104.214.172.60:5008/subscribe/johndoe@example.com`。
+> 若要退订，只需输入 `http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com`，例如 `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`。
+> 这是个人服务器，免费提供给大家使用。
+
 The **subscribe-XJTU-SOM-lecture** project is designed to help users stay updated on the latest lectures from the School of Management at Xi'an Jiaotong University (XJTU). The university's lecture updates are only available on their official website, which can lead to missed opportunities for attendees. This application captures the latest lecture announcements every hour, ensuring users never miss important events.
 
 The project utilizes the Flask framework to create an API that handles subscription and unsubscription requests. Subscribers will receive emails containing the lecture title, notification date, a poster, and an option to unsubscribe.

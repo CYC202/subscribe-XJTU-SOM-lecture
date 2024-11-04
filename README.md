@@ -24,12 +24,18 @@ Utilizing the Flask framework, the project creates an API that manages subscript
 
 ![image](https://github.com/user-attachments/assets/c92a7dd2-15b9-4fa0-aefe-fafae2279235)
 
-> **Note**: You can subscribe to lecture updates by entering `http://104.214.172.60:5008/subscribe/your_email@example.com` in your browser. For example, you can use `http://104.214.172.60:5008/subscribe/johndoe@example.com`.
+> **Note**: You can subscribe to lecture updates by entering `http://104.214.172.60:5008/subscribe/your_email@example.com` in your browser.
+>
+> For example, you can use `http://104.214.172.60:5008/subscribe/johndoe@example.com`.
+> 
 > To unsubscribe, simply enter `http://104.214.172.60:5008/unsubscribe/your_email@example.com`, such as `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`.
+> 
 > This is a personal server, provided free of charge.
 
 > **注**：您可以通过在浏览器中输入 `http://104.214.172.60:5008/subscribe/你的邮箱@example.com` 来订阅讲座更新，例如 `http://104.214.172.60:5008/subscribe/johndoe@example.com`。
+> 
 > 若要退订，只需输入 `http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com`，例如 `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`。
+> 
 > 这是个人服务器，免费提供给大家使用。
 
 ---

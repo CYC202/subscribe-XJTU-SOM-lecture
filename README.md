@@ -38,7 +38,7 @@ For example:
 - Subscribe: `http://104.214.172.60:5008/subscribe/johndoe@example.com`
 - Unsubscribe: `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`
 
-> 💝 This service runs on a personal server and is completely free to use!
+> ✈️ This service runs on a personal server and is completely free to use!
 
 ## 🏠 Run it Locally
 
@@ -105,7 +105,7 @@ http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com
 - 订阅：`http://104.214.172.60:5008/subscribe/johndoe@example.com`
 - 退订：`http://104.214.172.60:5008/unsubscribe/johndoe@example.com`
 
-> 💝 这是个人服务器，完全免费提供给大家使用！
+> ✈️ 这是个人服务器，完全免费提供给大家使用！
 
 ## 🏠 本地运行
 

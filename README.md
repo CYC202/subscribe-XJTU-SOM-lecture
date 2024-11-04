@@ -12,7 +12,7 @@ Utilizing the Flask framework, the project creates an API that manages subscript
 
 ---
 
-**subscribe-XJTU-SOM-lecture** 是一个旨在帮助用户及时获取西安交通大学管理学院最新讲座信息的项目。由于讲座更新仅在官方网站上发布，难以跟踪。该程序每小时监测讲座公告，并确保大家及时收到重要活动的更新。
+**subscribe-XJTU-SOM-lecture** 旨在帮助大家及时获取西交管理学院最新讲座信息。由于讲座更新仅在官方网站上发布，难以跟踪。该程序每小时监测讲座公告，确保大家及时收到重要活动的更新。
 
 该项目使用 Flask 框架创建了一个 API，处理订阅和退订请求。订阅者将收到包含讲座题目、公告时间、海报和退订选项的电子邮件。
 
@@ -22,9 +22,13 @@ Utilizing the Flask framework, the project creates an API that manages subscript
 - **订阅管理**：用户可以轻松地订阅或退订。
 - **监测功能**：跟踪和记录已发送的讲座信息，以避免重复通知。
 
-> **Note**: You can subscribe to lecture updates by entering `http://104.214.172.60:5008/subscribe/your_email@example.com` in your browser. For example, you can use `http://104.214.172.60:5008/subscribe/johndoe@example.com`. To unsubscribe, simply enter `http://104.214.172.60:5008/unsubscribe/your_email@example.com`, such as `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`. This is a personal server I set up, provided free of charge.
+> **Note**: You can subscribe to lecture updates by entering `http://104.214.172.60:5008/subscribe/your_email@example.com` in your browser. For example, you can use `http://104.214.172.60:5008/subscribe/johndoe@example.com`.
+> To unsubscribe, simply enter `http://104.214.172.60:5008/unsubscribe/your_email@example.com`, such as `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`.
+> This is a personal server, provided free of charge.
 
-> **注**：您可以通过在浏览器中输入 `http://104.214.172.60:5008/subscribe/你的邮箱@example.com` 来订阅讲座更新，例如 `http://104.214.172.60:5008/subscribe/johndoe@example.com`。若要退订，只需输入 `http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com`，例如 `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`。这是我个人搭建的服务器，免费提供给大家使用。
+> **注**：您可以通过在浏览器中输入 `http://104.214.172.60:5008/subscribe/你的邮箱@example.com` 来订阅讲座更新，例如 `http://104.214.172.60:5008/subscribe/johndoe@example.com`。
+> 若要退订，只需输入 `http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com`，例如 `http://104.214.172.60:5008/unsubscribe/johndoe@example.com`。
+> 这是个人服务器，免费提供给大家使用。
 
 ---
 

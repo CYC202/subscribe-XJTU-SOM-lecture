@@ -1,6 +1,4 @@
-email_credentials.txt
-sent_lectures.txt
-to_emails.txt
 .env
-generate_keys.py
-private_key.pem
+myDB.py
+lecture_monitor.db
+__pycache__/lecture_monitor.cpython-312.pyc

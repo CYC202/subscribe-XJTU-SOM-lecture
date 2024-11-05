@@ -233,10 +233,11 @@ class LectureMonitor:
 
     def start_monitoring(self, interval=3600):
         def run_monitor():
-            time.sleep(6000) # Delay start by 100 minutes
             while True:
-                self.monitor()
-                time.sleep(interval)
+                # 整点检查
+                if datetime.now().minute == 0:
+                    self.monitor()
+                    time.sleep(interval)
 
         thread = Thread(target=run_monitor)
         thread.daemon = True

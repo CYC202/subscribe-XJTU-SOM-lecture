@@ -2,9 +2,12 @@ from flask import Flask, request, jsonify
 from lecture_monitor import LectureMonitor
 import os
 import re
+from dotenv import find_dotenv, load_dotenv
 
 app = Flask(__name__)
 
+load_dotenv(find_dotenv('.env'))
+ 
 # Configuration Variables
 URL = os.getenv('URL')
 EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS')
@@ -13,7 +16,7 @@ DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lecture_moni
 
 # Initialize LectureMonitor instance and start monitoring thread
 monitor = LectureMonitor(URL, EMAIL_ADDRESS, EMAIL_PASSWORD, DB_FILE)
-monitor.start_monitoring(interval=3600)  # Run every hour
+monitor.start_monitoring()
 
 def is_valid_email(email):
     regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
@@ -63,6 +66,7 @@ def run_monitor():
 @app.route('/subscribed_emails/<password>', methods=['GET'])
 def get_subscribed_emails(password):
     if password == os.getenv('PASSWORD'):
+
         subscribed_emails = monitor.get_subscribers()
         return jsonify({'subscribed_emails': subscribed_emails})
     else:

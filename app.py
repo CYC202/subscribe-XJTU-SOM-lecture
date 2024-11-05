@@ -2,8 +2,9 @@ from flask import Flask, request, jsonify
 from lecture_monitor import LectureMonitor
 import os
 import re
-import threading
 import time
+from dotenv import load_dotenv
+load_dotenv()  
 
 app = Flask(__name__)
 
@@ -38,8 +39,7 @@ def subscribe(email=None):
         return jsonify({'message': message})
 
     else:
-        subscribed_emails = list(monitor.to_emails)
-        return jsonify({'subscribed_emails': subscribed_emails})
+        return jsonify({'error': 'Invalid email format'}), 400
 
 @app.route('/unsubscribe', methods=['GET', 'POST'])
 @app.route('/unsubscribe/<email>', methods=['GET'])
@@ -62,8 +62,7 @@ def unsubscribe(email=None):
         return jsonify({'message': message})
 
     else:
-        subscribed_emails = list(monitor.to_emails)
-        return jsonify({'subscribed_emails': subscribed_emails})
+        return jsonify({'error': 'Invalid email format'}), 400
 
 @app.route('/monitor', methods=['GET'])
 def run_monitor():
@@ -71,18 +70,17 @@ def run_monitor():
     monitor.monitor()
     return jsonify({'message': 'Monitor task executed successfully'})
 
-@app.route('/subscribed_emails', methods=['GET'])
-def get_subscribed_emails():
-    monitor = LectureMonitor(URL, EMAIL_CREDENTIALS_FILE, TO_EMAILS_FILE, STORAGE_FILE)
-    subscribed_emails = list(monitor.to_emails)
-    return jsonify({'subscribed_emails': subscribed_emails})
+@app.route('/subscribed_emails/<password>', methods=['GET'])
+def get_subscribed_emails(password):
+    psd = os.getenv('PASSWORD')
+    print(psd, password)
+    if password == psd:
+        monitor = LectureMonitor(URL, EMAIL_CREDENTIALS_FILE, TO_EMAILS_FILE, STORAGE_FILE)
+        subscribed_emails = list(monitor.to_emails)
+        return jsonify({'subscribed_emails': subscribed_emails})
 
-def run_monitor_periodically():
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5008)
     while True:
         run_monitor()  # Call the monitor function
         time.sleep(3600)  # Sleep for 1 hour (3600 seconds)
-
-if __name__ == "__main__":
-    # Start the monitoring thread
-    threading.Thread(target=run_monitor_periodically, daemon=True).start()
-    app.run(host='0.0.0.0', port=5008)

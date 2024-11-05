@@ -1,34 +1,47 @@
-# 📢 XJTU SOM Lecture Notifier
+# 📢 XJTU SOM Lecture Notifier 2.0
+Never miss another interesting lecture! This enhanced tool helps you stay updated with the latest academic lectures from the School of Management at Xi'an Jiaotong University (XJTU).
 
-Never miss another interesting lecture! This neat little tool helps you stay updated with the latest academic lectures from the School of Management at Xi'an Jiaotong University (XJTU).
+## 🆕 What's New!
+- 💾 **Persistent Storage**: Now using SQLite database for reliable subscriber management and lecture tracking
+- 🔒 **Email Validation**: Enhanced email validation for more secure subscription handling
+- 🎯 **Smart Monitoring**: Improved lecture detection
+- 🖼️ **Rich Email Content**: 
+  - Beautiful HTML email template with consistent styling
+  - Embedded lecture posters directly in emails
+  - Recent lectures section showing the last 5 lectures
+- 🛡️ **Error Handling**: Robust error handling for network issues and invalid requests
+- 🔄 **Flexible API**: Support for both GET and POST requests in subscribe/unsubscribe endpoints
 
-## 🤔 Why This Tool?
+## ✨ Core Features
+- 🔄 **Intelligent Auto-Updates**: 
+  - Checks for new lectures every hour
+- 📧 **Enhanced Email Notifications**: 
+  - Professional HTML email template
+  - Lecture title and details
+  - Direct link to lecture page
+  - Embedded event poster
+  - List of recent lectures
+  - Clean, responsive design
+- 🎯 **Advanced Tracking**: 
+  - SQLite database for reliable tracking
+  - No duplicate notifications
+  - Precise date-based filtering
 
-Ever missed an exciting lecture because you forgot to check the university website? We've all been there! That's exactly why this project exists. Instead of constantly checking the website, let the notifications come to you!
-
-## ✨ What It Does
-
-- 🔄 **Auto-Updates**: Checks for new lectures every hour
-- 📧 **Email Notifications**: Get all the juicy details right in your inbox
-  - Lecture title
-  - Date and time
-  - Event poster
-  - Easy unsubscribe option
-- 🎯 **Smart Tracking**: No duplicate notifications - we keep track of what we've sent!
-
-## 🛠 Tech Behind It
-
-Built with Flask because, well, sometimes simple is better! The API handles all the subscribe/unsubscribe magic, making sure your email preferences are taken care of.
+## 🛠 Technical Stack
+- **Backend**: Flask with SQLite
+- **Web Scraping**: BeautifulSoup4 and Requests
+- **Email**: SMTP with MIME support
+- **Data Processing**: Pandas for efficient data handling
+- **Database**: SQLite3 for persistent storage
+- **Threading**: Background monitoring with daemon threads
 
 ## 🚀 How to Use
-
 It's super simple! Just pop these URLs in your browser:
 
 To Subscribe:
 ```
 http://104.214.172.60:5008/subscribe/your_email@example.com
 ```
-
 To Unsubscribe:
 ```
 http://104.214.172.60:5008/unsubscribe/your_email@example.com
@@ -40,62 +53,76 @@ For example:
 
 > ✈️ This service runs on a personal server and is completely free to use!
 
-## 🏠 Run it Locally
-
-Don't want to use the public server? No problem! You can run this project locally:
-
-1. Clone the repository
+## 🏠 Local Development
+1. Clone the repository:
 ```bash
 git clone https://github.com/CYC202/subscribe-XJTU-SOM-lecture.git
 ```
 
-2. Install requirements
+2. Set up the environment variables:
+```bash
+export URL="your_target_url"
+export EMAIL_ADDRESS="your_email"
+export EMAIL_PASSWORD="your_email_password"
+export PASSWORD="your_admin_password"
+```
+
+3. Initialize the database:
+```bash
+python init_db.py
+```
+
+4. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Configure your email settings in `config.py`
-
-4. Run the application
+5. Run the application:
 ```bash
 python app.py
 ```
 
-Now you can access the service at `http://localhost:5008`!
+### 📬 Email Example
+<img src="./images/example.png" width="600" alt="Email Notification Example">
 
 ---
 
-# 西交管理学院讲座订阅助手 
+# 西交管理学院讲座订阅助手 2.0 
+再也不用担心错过精彩讲座啦！这个升级版小工具会帮你实时追踪西安交通大学管理学院的最新学术讲座信息。
 
-再也不用担心错过精彩讲座啦！这个小工具会帮你实时追踪西安交通大学管理学院的最新学术讲座信息。
+## 🆕 最新更新！
+- 💾 **持久化存储**: 使用SQLite数据库实现可靠的订阅管理和讲座追踪
+- 🔒 **邮箱验证**: 增强的邮箱验证功能，提供更安全的订阅处理
+- 🎯 **智能监控**: 改进的讲座检测系统
+- 🖼️ **丰富邮件内容**: 
+  - 精美的HTML邮件模板，统一的样式设计
+  - 讲座海报直接嵌入邮件
+  - 最近讲座栏目展示最新5场讲座
+- 🛡️ **错误处理**: 完善的网络问题和无效请求处理机制
+- 🔄 **灵活API**: 支持GET和POST两种请求方式的订阅/退订接口
 
-## 🤔 为什么需要这个工具？
-
-是不是经常因为忘记查看学院网站而错过感兴趣的讲座？这个项目就是为解决这个问题而生的。不用再时刻盯着网站，让通知来找你！
-
-## ✨ 功能特色
-
-- 🔄 **自动更新**：每小时检查最新讲座信息
-- 📧 **邮件通知**：重要信息直达邮箱
-  - 讲座标题
-  - 时间日期
-  - 活动海报
-  - 一键退订选项
-- 🎯 **智能追踪**：不会重复发送已通知的讲座
-
-## 🛠 技术实现
-
-使用 Flask 框架搭建，简单可靠！API 轻松处理订阅/退订请求，妥善管理您的邮件偏好。
+## 🎯 功能特色
+- 🔄 **智能自动更新**: 
+  - 每小时检查最新讲座信息
+- 📧 **增强邮件通知**: 
+  - 专业的HTML邮件模板
+  - 讲座标题和详情
+  - 讲座页面直接链接
+  - 内嵌活动海报
+  - 最近讲座列表
+  - 清晰响应式设计
+- 🎯 **高级追踪**: 
+  - 使用SQLite数据库可靠追踪
+  - 避免重复通知
+  - 精确的日期过滤
 
 ## 🚀 使用方法
-
 超级简单！在浏览器输入以下地址即可：
 
 订阅：
 ```
 http://104.214.172.60:5008/subscribe/你的邮箱@example.com
 ```
-
 退订：
 ```
 http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com
@@ -108,31 +135,36 @@ http://104.214.172.60:5008/unsubscribe/你的邮箱@example.com
 > ✈️ 这是个人服务器，完全免费提供给大家使用！
 
 ## 🏠 本地运行
-
-如果不想使用公共服务器，你也可以在本地运行这个项目：
-
-1. 克隆仓库
+1. 克隆仓库：
 ```bash
 git clone https://github.com/CYC202/subscribe-XJTU-SOM-lecture.git
 ```
 
-2. 安装依赖
+2. 配置环境变量：
+```bash
+export URL="your_target_url"
+export EMAIL_ADDRESS="your_email"
+export EMAIL_PASSWORD="your_email_password"
+export PASSWORD="your_admin_password"
+```
+
+3. 初始化数据库：
+```bash
+python init_db.py
+```
+
+4. 安装依赖：
 ```bash
 pip install -r requirements.txt
 ```
 
-3. 在 `config.py` 中配置你的邮箱设置
-
-4. 运行应用
+5. 运行应用：
 ```bash
 python app.py
 ```
 
-现在你可以通过 `http://localhost:5008` 访问服务啦！
-
-### 📬 Email Example
-<img src="./images/example.png" width="600" alt="Email Notification Example">
+### 📬 邮件示例
+<img src="./images/example.png" width="600" alt="邮件通知示例">
 
 ## 📜 License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

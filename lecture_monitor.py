@@ -111,7 +111,7 @@ class LectureMonitor:
 
     def get_recent_lectures_html(self):
         # Get the last 5 lectures based on the order they were fetched
-        recent_lectures = self.recent_lectures[-5:]
+        recent_lectures = self.recent_lectures[1:6]
         return ''.join(f"<li><a href='{lecture['link']}'>{lecture['title']}</a></li>" for lecture in recent_lectures)
 
     def send_email(self, update_content):

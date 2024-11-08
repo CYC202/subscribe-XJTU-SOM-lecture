@@ -231,14 +231,14 @@ class LectureMonitor:
             for _, row in latest_content.iterrows():
                 self.save_sent_lecture(row['title'], row['date'])
 
-    def start_monitoring(self):
-        def run_monitor():
-            while True:
-                # Check every hour
-                if datetime.now().minute == 0:
-                    self.monitor()
-                    time.sleep()
+    # def start_monitoring(self):
+    #     def run_monitor():
+    #         while True:
+    #             # Check every hour
+    #             if datetime.now().minute == 0:
+    #                 self.monitor()
+    #                 time.sleep()
 
-        thread = Thread(target=run_monitor)
-        thread.daemon = True
-        thread.start()
+    #     thread = Thread(target=run_monitor)
+    #     thread.daemon = True
+    #     thread.start()
